@@ -1,0 +1,9 @@
+servlet是扩展web服务器功能的组件规范。
+如何实现servlet 实现interface ：Servlet或者继承class : HttpServlet
+重定向 302 location 跳转新地址 地址栏会发生改变，会产生新的request和response
+转发 获取转发器，地址栏不变，发生在服务器内部，共享request和response
+servlet生命周期
+
+web程序为什么需要状态管理：web程序使用的是http协议通信，http为无状态协议，服务器需要判断是否为同一客户的请求，因此需要追踪客户
+cookie：浏览器访问服务器时，服务器返回结果时会在set-cookie消息头加入少量数据。浏览器保存下来，再次访问时浏览器会将数据以cookie消息头的方式请求服务器
+URLEncoder

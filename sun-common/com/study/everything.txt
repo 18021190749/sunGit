@@ -1,0 +1,9 @@
+token
+redis
+tomcat
+数据库
+
+--maven导入jar包
+mvn install:install-file -DgroupId=com.oracle -DartifactId=ojdbc6 -Dversion=11.2.0.1.0 -Dpackaging=jar -Dfile=ojdbc6.jar
+--idea乱码
+https://blog.csdn.net/zfy1355/article/details/70157034

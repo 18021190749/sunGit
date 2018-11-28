@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)https://www.cnblogs.com/shindo/p/5579191.html -->
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="origin">
+<title>五分钟读懂UML类图 - shindoyang - 博客园</title>
+<meta property="og:description" content="平时阅读一些远吗分析类文章或是设计应用架构时没少与UML类图打交道。实际上，UML类图中最常用到的元素五分钟就能掌握，下面赶紧来一起认识一下它吧： 一、类的属性的表示方式 在UML类图中，类使用包含类">
+<link type="text/css" rel="stylesheet" href="./五分钟读懂UML类图 - shindoyang - 博客园_files/blog-common.css">
+<link id="MainCss" type="text/css" rel="stylesheet" href="./五分钟读懂UML类图 - shindoyang - 博客园_files/bundle-coffee.css">
+<link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="./五分钟读懂UML类图 - shindoyang - 博客园_files/bundle-coffee-mobile.css">
+<link title="RSS" type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/shindo/rss">
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/shindo/rsd.xml">
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/shindo/wlwmanifest.xml">
+<script async="" src="./五分钟读懂UML类图 - shindoyang - 博客园_files/analytics.js"></script><script src="./五分钟读懂UML类图 - shindoyang - 博客园_files/jquery-2.2.0.min.js"></script>
+<script type="text/javascript">var currentBlogApp = 'shindo', cb_enable_mathjax=false;var isLogined=false;</script>
+<script src="./五分钟读懂UML类图 - shindoyang - 博客园_files/blog-common.js" type="text/javascript"></script>
+</head>
+<body>
+<a name="top"></a>
+
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+	<a id="lnkBlogLogo" href="https://www.cnblogs.com/shindo/"><img id="blogLogo" src="./五分钟读懂UML类图 - shindoyang - 博客园_files/logo.gif" alt="返回主页"></a>			
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle" href="https://www.cnblogs.com/shindo/">shindo</a></h1>
+<h2>To be strong !</h2>
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="navigator">
+			
+<ul id="navList">
+	<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">博客园</a></li>
+	<li><a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/shindo/">首页</a></li>
+	<li><a id="blog_nav_newpost" class="menu" rel="nofollow" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></li>
+	<li><a id="blog_nav_contact" accesskey="9" class="menu" rel="nofollow" href="https://msg.cnblogs.com/send/shindoyang">联系</a></li>
+	<li><a id="blog_nav_admin" class="menu" rel="nofollow" href="https://i.cnblogs.com/">管理</a></li>
+	<li><a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/shindo/rss">订阅</a>
+	<a id="blog_nav_rss_image" class="aHeaderXML" href="https://www.cnblogs.com/shindo/rss"><img src="./五分钟读懂UML类图 - shindoyang - 博客园_files/xml.gif" alt="订阅"></a></li>
+</ul>
+
+
+			<div class="blogStats">
+				
+				<div id="blog_stats">
+<!--done-->
+随笔- 88&nbsp;
+文章- 0&nbsp;
+评论- 55&nbsp;
+</div>
+				
+			</div><!--end: blogStats -->
+		</div><!--end: navigator 博客导航栏 -->
+		
+<div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class="post">
+		<h1 class="postTitle">
+			<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/shindo/p/5579191.html">五分钟读懂UML类图</a>
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<div id="cnblogs_post_body" class="blogpost-body"><p>平时阅读一些远吗分析类文章或是设计应用架构时没少与UML类图打交道。实际上，UML类图中最常用到的元素五分钟就能掌握，下面赶紧来一起认识一下它吧：</p>
+<p><span style="color: #ff0000; font-size: 16px;"><strong>一、类的属性的表示方式</strong></span></p>
+<p>在UML类图中，类使用包含类名、属性(field) 和方法(method) 且带有分割线的矩形来表示，比如下图表示一个Employee类，它包含name,age和email这3个属性，以及modifyInfo()方法。</p>
+<p><img src="./五分钟读懂UML类图 - shindoyang - 博客园_files/617148-20160612221055090-339746853.jpg" alt=""></p>
+<p>那么属性/方法名称前加的加号和减号是什么意思呢？它们表示了这个属性或方法的可见性，UML类图中表示可见性的符号有三种：</p>
+<p><strong>·</strong> + ：表示public</p>
+<p><strong>·</strong> - ：表示private</p>
+<p><strong>·</strong> #：表示protected（friendly也归入这类）</p>
+<p>因此，上图中的Employee类具有3个私有属性和一个公有方法。</p>
+<p>&nbsp;</p>
+<p>实际上，属性的完整表示方式是这样的：</p>
+<p><span style="color: #0000ff;"><strong>可见性 &nbsp;名称 ：类型 [ = 缺省值]</strong></span></p>
+<p>中括号中的内容表示是可选的</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;"><strong><span style="color: #ff0000;">二、类的方法的表示方式</span></strong></span></p>
+<p>上图中我们已经看到了方法的表示形式。实际上，方法的完整表示方式如下：</p>
+<p><strong><span style="color: #0000ff;">可见性 &nbsp;名称(参数列表) [ ： 返回类型]</span></strong></p>
+<p><span style="color: #000000;">同样，中括号中的内容是可选的。</span></p>
+<p>&nbsp;</p>
+<p><span style="color: #000000;">比如在下图的Demo类中，定义了3个方法：</span></p>
+<p><span style="color: #000000;"><img src="./五分钟读懂UML类图 - shindoyang - 博客园_files/617148-20160612222105058-2140837213.jpg" alt=""></span></p>
+<p>&nbsp;</p>
+<p><strong>·</strong> public方法method1接收一个类型为Object的参数，返回值类型为void</p>
+<p><strong>·</strong> protected方法method2无参数，返回值类型为String</p>
+<p><strong>·</strong> private方法method3接收类型分别为int、int[]的参数，返回值类型为int</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;"><strong><span style="color: #ff0000;">三、类与类之间关系的表示方式</span></strong></span></p>
+<p>1、关联关系</p>
+<p>关联关系又可进一步分为单向关联、双向关联和自关联。</p>
+<p>（1）单向关联</p>
+<p><img src="./五分钟读懂UML类图 - shindoyang - 博客园_files/617148-20160612224805636-1840590061.jpg" alt=""></p>
+<p>我们可以看到，在UML类图中单向关联用一个带箭头的直线表示。上图表示每个顾客都有一个地址，这通过让Customer类持有一个类型为Address的成员变量类实现。</p>
+<p>&nbsp;</p>
+<p>（2）双向关联</p>
+<p><img src="./五分钟读懂UML类图 - shindoyang - 博客园_files/617148-20160612225006840-13774319.jpg" alt=""></p>
+<p>从上图中我们很容易看出，所谓的双向关联就是双方各自持有对方类型的成员变量。在UML类图中，双向关联用一个不带箭头的直线表示。上图中在Customer类中维护一个Product[]数组，表示一个顾客购买了那些产品；在Product类中维护一个Customer类型的成员变量表示这个产品被哪个顾客所购买。</p>
+<p>&nbsp;</p>
+<p>（3）自关联</p>
+<p><img src="./五分钟读懂UML类图 - shindoyang - 博客园_files/617148-20160612225239636-76459111.jpg" alt=""></p>
+<p>自关联在UML类图中用一个带有箭头且指向自身的直线表示。上图的意思就是Node类包含类型为Node的成员变量，也就是“自己包含自己”。</p>
+<p>&nbsp;</p>
+<p>2、聚合关系</p>
+<p><img src="./五分钟读懂UML类图 - shindoyang - 博客园_files/617148-20160612225421496-664373564.jpg" alt=""></p>
+<p>上图中的Car类与Engine类就是聚合关系（Car类中包含一个Engine类型的成员变量）。由上图我们可以看到，UML中聚合关系用带空心菱形和箭头的直线表示。聚合关系强调是“整体”包含“部分”，但是“部分”可以脱离“整体”而单独存在。比如上图中汽车包含了发动机，而发动机脱离了汽车也能单独存在。</p>
+<p>&nbsp;</p>
+<p>3、组合关系</p>
+<p>组合关系与聚合关系见得最大不同在于：这里的“部分”脱离了“整体”便不复存在。比如下图：</p>
+<p><img src="./五分钟读懂UML类图 - shindoyang - 博客园_files/617148-20160612232819824-829657559.jpg" alt=""></p>
+<p>显然，嘴是头的一部分且不能脱离了头而单独存在。在UML类图中，组合关系用一个带实心菱形和箭头的直线表示。</p>
+<p>&nbsp;</p>
+<p>4、依赖关系</p>
+<p><img src="./五分钟读懂UML类图 - shindoyang - 博客园_files/617148-20160612232951746-9292157.jpg" alt=""></p>
+<p>从上图我们可以看到，Driver的drive方法只有传入了一个Car对象才能发挥作用，因此我们说Driver类依赖于Car类。在UML类图中，依赖关系用一条带有箭头的虚线表示。</p>
+<p>&nbsp;</p>
+<p>5、继承关系</p>
+<p>继承关系对应的是extend关键字，在UML类图中用带空心三角形的直线表示，如下图所示中，Student类与Teacher类继承了Person类。</p>
+<p><img src="./五分钟读懂UML类图 - shindoyang - 博客园_files/617148-20160612233246199-1404301867.jpg" alt=""></p>
+<p>&nbsp;</p>
+<p>6、接口实现关系</p>
+<p>这种关系对应implement关键字，在UML类图中用带空心三角形的虚线表示。如下图中，Car类与Ship类都实现了Vehicle接口。</p>
+<p><img src="./五分钟读懂UML类图 - shindoyang - 博客园_files/617148-20160612233430777-736506858.jpg" alt=""></p>
+<p>&nbsp;</p>
+<p>到了这里，UML类图中最常见的表示方式我们就介绍完了，有了这些我们就能读懂常见的UML类图了，剩下的遇到时再查即可。</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;"><strong><span style="color: #ff0000;">三、参考资料</span></strong></span></p>
+<p><strong>http://www.uml.org.cn/oobject/201211231.asp</strong></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>本贴原文：http://mp.weixin.qq.com/s?__biz=MzIzMjE1Njg4Mw==&amp;mid=2650117683&amp;idx=1&amp;sn=85e9946c81a5c283a691acfca174d52a#rd</p>
+<p>&nbsp;</p></div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory">分类: <a href="https://www.cnblogs.com/shindo/category/754979.html" target="_blank">计算机基础</a></div>
+<div id="EntryTag">标签: <a href="https://www.cnblogs.com/shindo/tag/UML%E7%B1%BB%E5%9B%BE/">UML类图</a></div>
+<div id="blog_post_info"><div id="green_channel">
+        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(5579191,cb_blogId,1);green_channel_success(this,&#39;谢谢推荐！&#39;);">好文要顶</a>
+            <a id="green_channel_follow" onclick="follow(&#39;e13efdb3-31b4-e311-8d02-90b11c0b17d6&#39;);" href="javascript:void(0);">关注我</a>
+    <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a>
+    <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="./五分钟读懂UML类图 - shindoyang - 博客园_files/icon_weibo_24.png" alt=""></a>
+    <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()"><img src="./五分钟读懂UML类图 - shindoyang - 博客园_files/wechat.png" alt=""></a>
+</div>
+<div id="author_profile">
+    <div id="author_profile_info" class="author_profile_info">
+            <a href="http://home.cnblogs.com/u/shindo/" target="_blank"><img src="./五分钟读懂UML类图 - shindoyang - 博客园_files/20140325232826.png" class="author_avatar" alt=""></a>
+        <div id="author_profile_detail" class="author_profile_info">
+            <a href="http://home.cnblogs.com/u/shindo/">shindoyang</a><br>
+            <a href="http://home.cnblogs.com/u/shindo/followees">关注 - 47</a><br>
+            <a href="http://home.cnblogs.com/u/shindo/followers">粉丝 - 26</a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="author_profile_honor"></div>
+    <div id="author_profile_follow">
+                <a href="javascript:void(0);" onclick="follow(&#39;e13efdb3-31b4-e311-8d02-90b11c0b17d6&#39;);return false;">+加关注</a>
+    </div>
+</div>
+<div id="div_digg">
+    <div class="diggit" onclick="votePost(5579191,&#39;Digg&#39;)">
+        <span class="diggnum" id="digg_count">16</span>
+    </div>
+    <div class="buryit" onclick="votePost(5579191,&#39;Bury&#39;)">
+        <span class="burynum" id="bury_count">0</span>
+    </div>
+    <div class="clear"></div>
+    <div class="diggword" id="digg_tips">
+    </div>
+</div>
+<script type="text/javascript">
+    currentDiggType = 0;
+</script></div>
+<div class="clear"></div>
+<div id="post_next_prev"><a href="https://www.cnblogs.com/shindo/p/5568791.html" class="p_n_p_prefix">« </a> 上一篇：<a href="https://www.cnblogs.com/shindo/p/5568791.html" title="发布于2016-06-08 00:28">Cookie知识点小结</a><br><a href="https://www.cnblogs.com/shindo/p/5630013.html" class="p_n_p_prefix">» </a> 下一篇：<a href="https://www.cnblogs.com/shindo/p/5630013.html" title="发布于2016-06-30 15:04">STS-使用前准备</a><br></div>
+</div>
+
+
+		</div>
+		<div class="postDesc">posted @ <span id="post-date">2016-06-12 23:38</span> <a href="https://www.cnblogs.com/shindo/">shindoyang</a> 阅读(<span id="post_view_count">65675</span>) 评论(<span id="post_comment_count">8</span>)  <a href="https://i.cnblogs.com/EditPosts.aspx?postid=5579191" rel="nofollow">编辑</a> <a href="https://www.cnblogs.com/shindo/p/5579191.html#" onclick="AddToWz(5579191);return false;">收藏</a></div>
+	</div>
+	<script type="text/javascript">var allowComments=true,cb_blogId=180431,cb_entryId=5579191,cb_blogApp=currentBlogApp,cb_blogUserGuid='e13efdb3-31b4-e311-8d02-90b11c0b17d6',cb_entryCreatedDate='2016/6/12 23:38:00';loadViewCount(cb_entryId);var cb_postType=1;</script>
+	
+</div><!--end: topics 文章、评论容器-->
+</div><a name="!comments"></a><div id="blog-comments-placeholder"><div id="comments_pager_top"></div>
+<!--done-->
+<br>
+<div class="feedback_area_title">评论</div>
+<div class="feedbackNoItems"></div>
+	
+
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="https://www.cnblogs.com/shindo/p/5579191.html#3709508" class="layer">#1楼</a><a name="3709508" id="comment_anchor_3709508"></a> <span class="comment_date">2017-06-07 23:07</span> | <a id="a_comment_author_3709508" href="https://www.cnblogs.com/deservel/" target="_blank">草帽、</a> <a href="http://msg.cnblogs.com/send/%E8%8D%89%E5%B8%BD%E3%80%81" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_3709508" class="blog_comment_body">为何没有评论</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3709508,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3709508,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_3709508_avatar" style="display:none;">http://pic.cnblogs.com/face/952426/20160729164022.png</span>
+			</div>
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="https://www.cnblogs.com/shindo/p/5579191.html#3767168" class="layer">#2楼</a><a name="3767168" id="comment_anchor_3767168"></a> <span class="comment_date">2017-08-26 21:19</span> | <a id="a_comment_author_3767168" href="https://www.cnblogs.com/cbywan/" target="_blank">天梯小蔡</a> <a href="http://msg.cnblogs.com/send/%E5%A4%A9%E6%A2%AF%E5%B0%8F%E8%94%A1" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_3767168" class="blog_comment_body">很好</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3767168,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3767168,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_3767168_avatar" style="display:none;">http://pic.cnblogs.com/face/1200237/20170828171004.png</span>
+			</div>
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="https://www.cnblogs.com/shindo/p/5579191.html#3789583" class="layer">#3楼</a><a name="3789583" id="comment_anchor_3789583"></a> <span class="comment_date">2017-09-19 14:23</span> | <a id="a_comment_author_3789583" href="http://home.cnblogs.com/u/1242175/" target="_blank">思豪不怠~</a> <a href="http://msg.cnblogs.com/send/%E6%80%9D%E8%B1%AA%E4%B8%8D%E6%80%A0~" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_3789583" class="blog_comment_body">6666,通俗易懂~</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3789583,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3789583,&#39;Bury&#39;,this)">反对(0)</a></div>
+			</div>
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="https://www.cnblogs.com/shindo/p/5579191.html#3881497" class="layer">#4楼</a><a name="3881497" id="comment_anchor_3881497"></a> <span class="comment_date">2018-01-04 16:16</span> | <a id="a_comment_author_3881497" href="http://home.cnblogs.com/u/1295309/" target="_blank">chktsang</a> <a href="http://msg.cnblogs.com/send/chktsang" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_3881497" class="blog_comment_body">谢谢您提供的信息。<br><br>让我补充类图更新的信息如下：<br><br><a href="https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-class-diagram/" target="_blank">https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-class-diagram/</a><br><br><a href="https://www.visual-paradigm.com/guide/uml-unified-modeling-language/uml-aggregation-vs-composition/" target="_blank">https://www.visual-paradigm.com/guide/uml-unified-modeling-language/uml-aggregation-vs-composition/</a></div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3881497,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3881497,&#39;Bury&#39;,this)">反对(0)</a></div>
+			</div>
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="https://www.cnblogs.com/shindo/p/5579191.html#3901415" class="layer">#5楼</a><a name="3901415" id="comment_anchor_3901415"></a> <span class="comment_date">2018-01-31 20:53</span> | <a id="a_comment_author_3901415" href="https://www.cnblogs.com/gongli123/" target="_blank">加速奔跑的蜗牛</a> <a href="http://msg.cnblogs.com/send/%E5%8A%A0%E9%80%9F%E5%A5%94%E8%B7%91%E7%9A%84%E8%9C%97%E7%89%9B" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_3901415" class="blog_comment_body">很好哦，谢谢博主</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3901415,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3901415,&#39;Bury&#39;,this)">反对(0)</a></div>
+			</div>
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="https://www.cnblogs.com/shindo/p/5579191.html#3908889" class="layer">#6楼</a><a name="3908889" id="comment_anchor_3908889"></a> <span class="comment_date">2018-02-21 13:29</span> | <a id="a_comment_author_3908889" href="https://www.cnblogs.com/Cirgo/" target="_blank">源粥律</a> <a href="http://msg.cnblogs.com/send/%E6%BA%90%E7%B2%A5%E5%BE%8B" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_3908889" class="blog_comment_body">通俗易懂，写得好！</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3908889,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3908889,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_3908889_avatar" style="display:none;">http://pic.cnblogs.com/face/1298593/20171212222201.png</span>
+			</div>
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="https://www.cnblogs.com/shindo/p/5579191.html#3920490" class="layer">#7楼</a><a name="3920490" id="comment_anchor_3920490"></a> <span class="comment_date">2018-03-12 09:20</span> | <a id="a_comment_author_3920490" href="https://www.cnblogs.com/qtxy/" target="_blank">萝卜小兔子头</a> <a href="http://msg.cnblogs.com/send/%E8%90%9D%E5%8D%9C%E5%B0%8F%E5%85%94%E5%AD%90%E5%A4%B4" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_3920490" class="blog_comment_body">请问楼主，单项关联和组合关联是不是一样的？</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3920490,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3920490,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_3920490_avatar" style="display:none;">http://pic.cnblogs.com/face/498254/20161027160237.png</span>
+			</div>
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="https://www.cnblogs.com/shindo/p/5579191.html#4047066" class="layer">#8楼</a><a name="4047066" id="comment_anchor_4047066"></a><span id="comment-maxId" style="display:none;">4047066</span><span id="comment-maxDate" style="display:none;">2018/8/21 11:11:04</span> <span class="comment_date">2018-08-21 11:11</span> | <a id="a_comment_author_4047066" href="https://www.cnblogs.com/drafire/" target="_blank">drafire</a> <a href="http://msg.cnblogs.com/send/drafire" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_4047066" class="blog_comment_body">不错哦</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(4047066,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(4047066,&#39;Bury&#39;,this)">反对(0)</a></div>
+			</div>
+		</div>
+	<div id="comments_pager_bottom"></div></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id="comment_form" class="commentform">
+<a name="commentform"></a>
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="https://www.cnblogs.com/shindo/p/5579191.html#" onclick="return RefreshPage();">刷新页面</a><a href="https://www.cnblogs.com/shindo/p/5579191.html#top">返回顶部</a></div>
+<div id="comment_form_container"><div class="login_tips">注册用户登录后才能发表评论，请 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return login(&#39;commentform&#39;);">登录</a> 或 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return register();">注册</a>，<a href="http://www.cnblogs.com/">访问</a>网站首页。</div></div>
+<div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+<div id="ad_t2"><a href="http://www.ucancode.com/index.htm" target="_blank">【推荐】超50万VC++源码: 大型组态工控、电力仿真CAD与GIS源码库！</a><br><a href="http://www.toastenglish.com/1024/cnblogs.html" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-T2-toast&#39;)">【免费】程序员21天搞定英文文档阅读</a><br><a href="https://www.grapecity.com.cn/developer/activereports?utm_source=cnblogs&amp;utm_medium=blogpage&amp;utm_term=bottom&amp;utm_content=AR&amp;utm_campaign=community" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-ActiveReports&#39;)">【推荐】ActiveReports 报表控件，全面满足 .NET开发需求</a><br><a href="https://cloud.tencent.com/developer/edu/major-100008?fromSource=gwzcw.1297698.1297698.1297698" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-腾讯蓝鲸&#39;)">【推荐】企业SaaS应用开发实战，快速构建企业运营/运维系统</a><br></div>
+<div id="opt_under_post"></div>
+<div id="cnblogs_c1" class="c_ad_block"><a href="https://cloud.tencent.com/act/ecommerce?fromSource=gwzcw.1191780.1191780.1191780" target="_blank"><img width="300" height="250" src="./五分钟读懂UML类图 - shindoyang - 博客园_files/24442-20180814102629155-1096944426.png" alt="qcloud0814" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;C1&#39;);"></a></div>
+<div id="under_post_news"><div class="itnews c_ad_block"><b>最新IT新闻</b>:<br> ·  <a href="https://news.cnblogs.com/n/605149/" target="_blank">小米18年中报业绩大增 雷军拿99亿奖励刷新世界纪录</a><br> ·  <a href="https://news.cnblogs.com/n/605148/" target="_blank">杭州将建设亚洲第一座计算机博物馆</a><br> ·  <a href="https://news.cnblogs.com/n/605133/" target="_blank">易车二季度营业收入25.64亿元 同比增长28.5%</a><br> ·  <a href="https://news.cnblogs.com/n/605145/" target="_blank">软件故障导致混乱 YC误向1.5万家创企发送录取通知</a><br> ·  <a href="https://news.cnblogs.com/n/605142/" target="_blank">微软指控俄黑客入侵美国智库 俄罗斯回应：证据呢</a><br>» <a href="http://news.cnblogs.com/" title="IT新闻" target="_blank">更多新闻...</a></div></div>
+<div id="cnblogs_c2" class="c_ad_block"><a href="http://clickc.admaster.com.cn/c/a113319,b2799157,c1705,i0,m101,8a1,8b3,h" target="_blank"><img width="468" height="60" src="./五分钟读懂UML类图 - shindoyang - 博客园_files/24442-20180821211532241-413062430.jpg" alt="华为CH0822" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;C2&#39;);"></a></div>
+<div id="under_post_kb"><div class="itnews c_ad_block" id="kb_block"><b>最新知识库文章</b>:<br><div id="kb_recent"> ·  <a href="https://kb.cnblogs.com/page/573614/" target="_blank">一个故事看懂“区块链”</a><br> ·  <a href="https://kb.cnblogs.com/page/603697/" target="_blank">被踢出去的用户</a><br> ·  <a href="https://kb.cnblogs.com/page/603279/" target="_blank">成为一个有目标的学习者</a><br> ·  <a href="https://kb.cnblogs.com/page/602903/" target="_blank">历史转折中的“杭派工程师”</a><br> ·  <a href="https://kb.cnblogs.com/page/602573/" target="_blank">如何提高代码质量？</a><br></div>» <a href="https://kb.cnblogs.com/" target="_blank">更多知识库文章...</a></div></div>
+<div id="HistoryToday" class="c_ad_block"></div>
+<script type="text/javascript">
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverAdT2();
+    deliverAdC1();
+    deliverAdC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);   
+</script>
+</div>
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<!--done-->
+<div class="newsItem">
+<h3 class="catListTitle">公告</h3>
+	<div id="blog-news"><div id="myTime"></div>
+<div id="mouse">
+</div><div id="profile_block">昵称：<a href="https://home.cnblogs.com/u/shindo/">shindoyang</a><br>园龄：<a href="https://home.cnblogs.com/u/shindo/" title="入园时间：2014-03-25">4年4个月</a><br>粉丝：<a href="https://home.cnblogs.com/u/shindo/followers/">26</a><br>关注：<a href="https://home.cnblogs.com/u/shindo/followees/">47</a><div id="p_b_follow"><a href="javascript:void(0);" onclick="follow(&#39;e13efdb3-31b4-e311-8d02-90b11c0b17d6&#39;)">+加关注</a></div><script>getFollowStatus('e13efdb3-31b4-e311-8d02-90b11c0b17d6')</script></div></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+
+			<div id="calendar"><div id="blog-calendar" style=""><table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="Calendar">
+	<tbody><tr><td colspan="7"><table class="CalTitle" cellspacing="0">
+		<tbody><tr><td class="CalNextPrev"><a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2018/07/01&#39;);return false;">&lt;</a></td><td align="center">2018年8月</td><td class="CalNextPrev" align="right"><a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2018/09/01&#39;);return false;">&gt;</a></td></tr>
+	</tbody></table></td></tr><tr><th class="CalDayHeader" align="center" abbr="日" scope="col">日</th><th class="CalDayHeader" align="center" abbr="一" scope="col">一</th><th class="CalDayHeader" align="center" abbr="二" scope="col">二</th><th class="CalDayHeader" align="center" abbr="三" scope="col">三</th><th class="CalDayHeader" align="center" abbr="四" scope="col">四</th><th class="CalDayHeader" align="center" abbr="五" scope="col">五</th><th class="CalDayHeader" align="center" abbr="六" scope="col">六</th></tr><tr><td class="CalOtherMonthDay" align="center">29</td><td class="CalOtherMonthDay" align="center">30</td><td class="CalOtherMonthDay" align="center">31</td><td align="center">1</td><td align="center">2</td><td align="center">3</td><td class="CalWeekendDay" align="center">4</td></tr><tr><td class="CalWeekendDay" align="center">5</td><td align="center">6</td><td align="center">7</td><td align="center">8</td><td align="center">9</td><td align="center">10</td><td class="CalWeekendDay" align="center">11</td></tr><tr><td class="CalWeekendDay" align="center">12</td><td align="center">13</td><td align="center">14</td><td align="center">15</td><td align="center">16</td><td align="center">17</td><td class="CalWeekendDay" align="center">18</td></tr><tr><td class="CalWeekendDay" align="center">19</td><td align="center">20</td><td align="center">21</td><td class="CalTodayDay" align="center">22</td><td align="center">23</td><td align="center">24</td><td class="CalWeekendDay" align="center">25</td></tr><tr><td class="CalWeekendDay" align="center">26</td><td align="center">27</td><td align="center">28</td><td align="center">29</td><td align="center">30</td><td align="center">31</td><td class="CalOtherMonthDay" align="center">1</td></tr><tr><td class="CalOtherMonthDay" align="center">2</td><td class="CalOtherMonthDay" align="center">3</td><td class="CalOtherMonthDay" align="center">4</td><td class="CalOtherMonthDay" align="center">5</td><td class="CalOtherMonthDay" align="center">6</td><td class="CalOtherMonthDay" align="center">7</td><td class="CalOtherMonthDay" align="center">8</td></tr>
+</tbody></table></div><script type="text/javascript">loadBlogDefaultCalendar();</script></div>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"><div id="sidebar_search" class="sidebar-block">
+<div id="sidebar_search" class="mySearch">
+<h3 class="catListTitle">搜索</h3>
+<div id="sidebar_search_box">
+<div id="widget_my_zzk" class="div_my_zzk"><input type="text" id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="zzk_go()" type="button" value="找找看" id="btnZzk" class="btn_my_zzk"></div>
+<div id="widget_my_google" class="div_my_zzk"><input type="text" name="google_q" id="google_q" onkeydown="return google_go_enter(event)" class="input_my_zzk">&nbsp;<input onclick="google_go()" type="button" value="谷歌搜索" class="btn_my_zzk"></div>
+</div>
+</div>
+
+</div><div id="sidebar_shortcut" class="sidebar-block">
+<div class="catListLink">
+<h3 class="catListTitle">常用链接</h3>
+<ul>
+<li><a href="https://www.cnblogs.com/shindo/p/" title="我的博客的随笔列表">我的随笔</a></li><li><a href="https://www.cnblogs.com/shindo/MyComments.html" title="我发表过的评论列表">我的评论</a></li><li><a href="https://www.cnblogs.com/shindo/OtherPosts.html" title="我评论过的随笔列表">我的参与</a></li><li><a href="https://www.cnblogs.com/shindo/RecentComments.html" title="我的博客的评论列表">最新评论</a></li><li><a href="https://www.cnblogs.com/shindo/tag/" title="我的博客的标签列表">我的标签</a></li>
+<li><a id="itemListLink" onclick="this.blur();WarpClass(&#39;itemListLink&#39;, &#39;itemListLin_con&#39;);return false;" href="https://www.cnblogs.com/shindo/p/5579191.html#">更多链接</a></li>
+</ul>
+<div id="itemListLin_con" style="display:none;">
+<ul>
+
+</ul>
+</div>
+</div></div><div id="sidebar_toptags" class="sidebar-block">
+<div class="catListTag">
+<h3 class="catListTitle">我的标签</h3>
+<ul>
+<li><a href="https://www.cnblogs.com/shindo/tag/eclipse/">eclipse</a>(4)</li><li><a href="https://www.cnblogs.com/shindo/tag/3DES/">3DES</a>(2)</li><li><a href="https://www.cnblogs.com/shindo/tag/openreports/">openreports</a>(2)</li><li><a href="https://www.cnblogs.com/shindo/tag/tomcat/">tomcat</a>(2)</li><li><a href="https://www.cnblogs.com/shindo/tag/sts/">sts</a>(2)</li><li><a href="https://www.cnblogs.com/shindo/tag/java/">java</a>(2)</li><li><a href="https://www.cnblogs.com/shindo/tag/java%20%20DB%20%20mysql%20%20%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8/">java  DB  mysql  分库分表</a>(1)</li><li><a href="https://www.cnblogs.com/shindo/tag/java%20%20DB2%20%20Oracle%20%20%E7%B4%A2%E5%BC%95/">java  DB2  Oracle  索引</a>(1)</li><li><a href="https://www.cnblogs.com/shindo/tag/java%20%20jmock/">java  jmock</a>(1)</li><li><a href="https://www.cnblogs.com/shindo/tag/java%20%20String/">java  String</a>(1)</li><li><a href="https://www.cnblogs.com/shindo/tag/">更多</a></li>
+</ul>
+</div></div><div id="sidebar_categories">
+<div class="catListPostCategory">
+<h3 class="catListTitle">随笔分类</h3>
+
+</div>
+
+<div class="catListPostArchive">
+<h3 class="catListTitle">随笔档案</h3>
+
+</div>
+
+<div class="catListArticleCategory">
+<h3 class="catListTitle">文章分类</h3>
+
+<ul>
+
+<li><a id="CatList_LinkList_2_Link_0" href="https://www.cnblogs.com/shindo/category/754723.html">OpenReports</a> </li>
+
+</ul>
+
+</div>
+
+</div><div id="sidebar_recentcomments" class="sidebar-block"><div id="recent_comments_wrap">
+<div class="catListComment">
+<h3 class="catListTitle">最新评论</h3>
+
+	<div id="RecentCommentsBlock"><ul>
+        <li class="recent_comment_title"><a href="https://www.cnblogs.com/shindo/p/5579191.html#4047066">1. Re:五分钟读懂UML类图</a></li>
+        <li class="recent_comment_body">不错哦</li>
+        <li class="recent_comment_author">--drafire</li>
+        <li class="recent_comment_title"><a href="https://www.cnblogs.com/shindo/p/7272646.html#4042825">2. Re:Intellij Idea 2017创建web项目及tomcat部署实战</a></li>
+        <li class="recent_comment_body">楼主，我用的2018版本的idea 在创建web项目时，怎么没有java EE选项呢？<br></li>
+        <li class="recent_comment_author">--IT实施工程师-杨更伟</li>
+        <li class="recent_comment_title"><a href="https://www.cnblogs.com/shindo/p/7272646.html#4003956">3. Re:Intellij Idea 2017创建web项目及tomcat部署实战</a></li>
+        <li class="recent_comment_body">十分感谢</li>
+        <li class="recent_comment_author">--accelerator89</li>
+        <li class="recent_comment_title"><a href="https://www.cnblogs.com/shindo/p/7272646.html#3978882">4. Re:Intellij Idea 2017创建web项目及tomcat部署实战</a></li>
+        <li class="recent_comment_body">很详细，可用</li>
+        <li class="recent_comment_author">--judyfun</li>
+        <li class="recent_comment_title"><a href="https://www.cnblogs.com/shindo/p/4957969.html#3973992">5. Re:OpenReports操作指南</a></li>
+        <li class="recent_comment_body">大神，抽空能发一份源码给我吗？先谢谢了。 <br>liuyi562@126.com</li>
+        <li class="recent_comment_author">--Frank LiuWB</li>
+</ul>
+</div>
+</div>
+</div></div><div id="sidebar_topviewedposts" class="sidebar-block"><div id="topview_posts_wrap">
+<div class="catListView">
+<h3 class="catListTitle">阅读排行榜</h3>
+	<div id="TopViewPostsBlock"><ul><li><a href="https://www.cnblogs.com/shindo/p/7272646.html">1. Intellij Idea 2017创建web项目及tomcat部署实战(84248)</a></li><li><a href="https://www.cnblogs.com/shindo/p/5579191.html">2. 五分钟读懂UML类图(65670)</a></li><li><a href="https://www.cnblogs.com/shindo/p/5959329.html">3. windows使用命令行杀进程(34163)</a></li><li><a href="https://www.cnblogs.com/shindo/p/6021976.html">4. 3DES加密算法(23582)</a></li><li><a href="https://www.cnblogs.com/shindo/p/5920336.html">5. Java使用poi包读取Excel文档(10351)</a></li></ul></div>
+</div>
+</div></div><div id="sidebar_topcommentedposts" class="sidebar-block"><div id="topfeedback_posts_wrap">
+<div class="catListFeedback">
+<h3 class="catListTitle">评论排行榜</h3>
+	<div id="TopFeedbackPostsBlock"><ul><li><a href="https://www.cnblogs.com/shindo/p/4957969.html">1. OpenReports操作指南(29)</a></li><li><a href="https://www.cnblogs.com/shindo/p/7272646.html">2. Intellij Idea 2017创建web项目及tomcat部署实战(13)</a></li><li><a href="https://www.cnblogs.com/shindo/p/5579191.html">3. 五分钟读懂UML类图(8)</a></li><li><a href="https://www.cnblogs.com/shindo/p/6609797.html">4. Maven ： 将Jar安装到本地仓库和Jar上传到私服[转](2)</a></li><li><a href="https://www.cnblogs.com/shindo/p/4958767.html">5. OpenReports中文支持方案(2)</a></li></ul></div>
+</div>
+</div></div><div id="sidebar_topdiggedposts" class="sidebar-block"><div id="topdigg_posts_wrap">
+<div class="catListView">
+<h3 class="catListTitle">推荐排行榜</h3>
+<div id="TopDiggPostsBlock"><ul><li><a href="https://www.cnblogs.com/shindo/p/5579191.html">1. 五分钟读懂UML类图(16)</a></li><li><a href="https://www.cnblogs.com/shindo/p/7272646.html">2. Intellij Idea 2017创建web项目及tomcat部署实战(16)</a></li><li><a href="https://www.cnblogs.com/shindo/p/5920336.html">3. Java使用poi包读取Excel文档(4)</a></li><li><a href="https://www.cnblogs.com/shindo/p/6117647.html">4. nginx 配置自签名的ssl证书(2)</a></li><li><a href="https://www.cnblogs.com/shindo/p/6396145.html">5. 【转】Java生成图片验证码(1)</a></li></ul></div>
+</div></div></div></div><script type="text/javascript">loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		
+<!--done-->
+Copyright ©2018 shindoyang
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+</body></html>
