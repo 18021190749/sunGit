@@ -8,6 +8,7 @@ package com.study.sort.bit;
  */
 public class Bit {
     public static void main(String[] args) {
+        System.out.println("bit sort");
         System.out.println(0^10);
     }
 }
